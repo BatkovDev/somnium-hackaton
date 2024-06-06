@@ -1,0 +1,55 @@
+
+.vacancies .job-list .vacancy {
+    border-radius: 6px;
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+.vacancies .job-list .vacancy .title {
+    text-decoration: none;
+    color: #1769aa;
+    font-weight: 600;
+    font-size: 22px;
+    border: unset;
+    background: unset;
+}
+.vacancies .job-list .vacancy .price {
+    font-size: 22px;
+}
+.vacancies .job-list .vacancy .title:hover {
+    text-decoration: underline;
+    color: #1769aa;
+}
+.vacancies .job-list .vacancy .location,
+.vacancies .job-list .vacancy .team {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.vacancies .job-list .vacancy .tags {
+    display: flex;
+    gap: 5px;
+    margin: 5px 0;
+}
+.vacancies .job-list .vacancy .tags span {
+    background: var(--primary-color);
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+.vacancies .job-list .vacancy a {
+    text-decoration: none;
+}
+.vacancies .job-list .vacancy .respond {
+    background: #fff;
+    border: 1px solid var(--primary-color);
+    padding: 6px;
+    border-radius: 6px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: block;
+}
+.vacancies .job-list .vacancy .respond:hover {
+    background: #e7e7e7;
+}

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --padside: 200px;
+  --primary-color: #2196F3;
+  --secondary-color: #1769aa;
+  --toggle: #ccc;
+  --text-color: #222;
+  --background-color-light: #fff;
+  --background-color-dark: #222;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-color: var(--background-color-light); /* Default background color */
+  color: var(--text-color); /* Default text color */
+  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: var(--background-color-light);
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 0 var(--padside);
+}
+
+nav .logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav .links a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+nav .links a:hover {
+    color: #000;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle); /* Default background color */
+  transition: .4s;
+  border-radius: 34px; /* Round shape */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--background-color-light); /* Default color of the circle */
+  transition: .4s;
+  border-radius: 50%; /* Circle shape */
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color); /* Background color when checked */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-color); /* Box shadow when focused */
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px); /* Move circle to the right when checked */
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: var(--background-color-dark);
+  color: #fff;
+}
+
+.slider.dark-theme {
+  background-color: var(--toggle);
+}
+
+.slider.dark-theme:before {
+  background-color: var(--background-color-dark);
+}
+
+input:checked.dark-theme + .slider {
+  background-color: var(--primary-color);
+}
+
+input:focus.dark-theme + .slider {
+  box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked.dark-theme + .slider:before {
+  background-color: var(--background-color-dark);
+}
+.profile-button {
+  background: unset;
+  border: unset;
+  display: flex;
+  cursor: pointer;
+}
+.profile-button .bi {
+  width: 20px;
+  height: 20px;
+}
+.profile-menu .menu-dropdown {
+  position: absolute;
+  top: 60px;
+  right: var(--padside);
+  background: #fff;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 5px;
+}
+.profile-menu .menu-dropdown button {
+  background: rgb(235, 235, 235);
+  border: unset;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+.search-by-keyword {
+    background: #2196f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px var(--padside);
+}
+.search-by-keyword h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.search-by-keyword form input {
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    height: 50px;
+    border-radius: 15px;
+    padding: 0 10px;
+    border: 1px solid #1769aa;
+    background: #fff;
+    color: #000;
+    outline: unset;
+}
+
+
+.vacancies {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 50px;
+    padding: 15px var(--padside);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.vacancies .filter h2 {
+    font-size: 16px;
+    margin: 0;
+}
+.vacancies .filter-section {
+    border-bottom: 1px solid rgb(205, 205, 205);
+    padding-bottom: 15px;
+}
+.vacancies .filter-section h3 {
+    font-size: 18px;
+}
+.vacancies .filter-section .list {
+    margin: 5px 0;
+    list-style: none;
+}
+.vacancies .filter-section .list li {
+    line-height: 1.5;
+    user-select: none;
+}
+
+
+
+.vacancies .job-list {
+    margin: 0;
+    list-style: none;
+}

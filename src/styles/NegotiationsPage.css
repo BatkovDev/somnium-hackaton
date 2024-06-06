@@ -1,0 +1,62 @@
+
+.container#negotiations .list {
+    list-style: none;
+}
+.container#negotiations .list li {
+    display: grid;
+    grid-template-columns: 200px 1fr 150px;
+    gap: 15px;
+}
+.container#negotiations .list li:not(:last-child) {
+    border-bottom: 1px solid rgb(201, 201, 201);
+    margin-bottom: 20px;
+}
+.container#negotiations .list li .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container#negotiations .list li .avatar img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    align-self: center;
+}
+.container#negotiations .list li .avatar h2 {
+    font-size: 20px;
+    text-align: center;
+}
+.container#negotiations .list li .info > * {
+    margin: 0;
+}
+.container#negotiations .list li .info a {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    line-height: 1.5;
+}
+.container#negotiations .list li .info .last-job p {
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.container#negotiations .list li .info .status {
+    background: #2195f336;
+    color: #2196F3;
+    width: max-content;
+    margin: 8px 0 4px 0;
+    padding: 4px 6px;
+}
+.container#negotiations .list li .files button {
+    background: unset;
+    border: 2px solid #2196F3;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 6px;
+}

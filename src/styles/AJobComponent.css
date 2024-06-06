@@ -1,0 +1,50 @@
+
+.container .list .vacancy {
+    border-radius: 6px;
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+.container .list .vacancy .title {
+    text-decoration: none;
+    color: #1769aa;
+    font-weight: 600;
+    font-size: 22px;
+}
+.container .list .vacancy .price {
+    font-size: 22px;
+}
+.container .list .vacancy .title:hover {
+    text-decoration: underline;
+    color: #1769aa;
+}
+.container .list .vacancy .location,
+.container .list .vacancy .team {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.container .list .vacancy .tags {
+    display: flex;
+    gap: 5px;
+    margin: 5px 0;
+}
+.container .list .vacancy .tags span {
+    background: var(--primary-color);
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.container .list .vacancy .option {
+    background: unset;
+    border: 2px solid #2196F3;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px;
+}
+.container .list .vacancy .option.delete {
+    border-color: rgb(238, 38, 38);
+}

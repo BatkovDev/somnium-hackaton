@@ -1,0 +1,40 @@
+.container h1 {
+    font-size: 24px;
+}
+.container form {
+    display: flex;
+    flex-direction: column;
+}
+.container form div {
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 10px;
+}
+.container form input {
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 18px;
+}
+.container form select {
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.input-double {
+    display: flex;
+    flex-direction: row !important;
+    gap: 4px;
+}
+
+.container form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}

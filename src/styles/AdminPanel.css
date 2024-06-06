@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --padside: 200px;
+  --primary-color: #2196F3;
+  --secondary-color: #1769aa;
+  --toggle: #ccc;
+  --text-color: #222;
+  --background-color-light: #fff;
+  --background-color-dark: #222;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-color: var(--background-color-light); /* Default background color */
+  color: var(--text-color); /* Default text color */
+  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: var(--background-color-light);
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 0 var(--padside);
+}
+
+nav .logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav .links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-flex;
+}
+nav .links a:hover {
+    color: #000;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle); /* Default background color */
+  transition: .4s;
+  border-radius: 34px; /* Round shape */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--background-color-light); /* Default color of the circle */
+  transition: .4s;
+  border-radius: 50%; /* Circle shape */
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color); /* Background color when checked */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-color); /* Box shadow when focused */
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px); /* Move circle to the right when checked */
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: var(--background-color-dark);
+  color: #fff;
+}
+
+.slider.dark-theme {
+  background-color: var(--toggle);
+}
+
+.slider.dark-theme:before {
+  background-color: var(--background-color-dark);
+}
+
+input:checked.dark-theme + .slider {
+  background-color: var(--primary-color);
+}
+
+input:focus.dark-theme + .slider {
+  box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked.dark-theme + .slider:before {
+  background-color: var(--background-color-dark);
+}
+main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    padding: 0 var(--padside);
+}
+main .side {
+    padding: 4px 10px;
+    padding-top: 40px;
+    border-right: 1px solid rgb(209, 209, 209);
+}
+main .side a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: .14s;
+}
+main .side a:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+main .container {
+    margin: 40px 0 0 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 10px;
+}
